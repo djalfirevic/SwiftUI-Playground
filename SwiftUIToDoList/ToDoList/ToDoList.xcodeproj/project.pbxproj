@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C49582D42460834600D58FA3 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49582D32460834600D58FA3 /* SearchBar.swift */; };
 		F48A99BB2429D99F0008A482 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48A99BA2429D99F0008A482 /* AppDelegate.swift */; };
 		F48A99BD2429D99F0008A482 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48A99BC2429D99F0008A482 /* SceneDelegate.swift */; };
 		F48A99C22429D99F0008A482 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48A99C12429D99F0008A482 /* ContentView.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C49582D32460834600D58FA3 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		F48A99B72429D99F0008A482 /* ToDoList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDoList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F48A99BA2429D99F0008A482 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F48A99BC2429D99F0008A482 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 				F48A99C12429D99F0008A482 /* ContentView.swift */,
 				F48A99D12429F10D0008A482 /* CheckBoxStyle.swift */,
 				F4AFAB92242C605000D816B2 /* NewToDoView.swift */,
+				C49582D32460834600D58FA3 /* SearchBar.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -187,6 +190,7 @@
 				F48A99C22429D99F0008A482 /* ContentView.swift in Sources */,
 				F4AFAB93242C605000D816B2 /* NewToDoView.swift in Sources */,
 				F48A99BD2429D99F0008A482 /* SceneDelegate.swift in Sources */,
+				C49582D42460834600D58FA3 /* SearchBar.swift in Sources */,
 				F48A99D22429F10D0008A482 /* CheckBoxStyle.swift in Sources */,
 				F4AFABE6243343E900D816B2 /* TodoList.xcdatamodeld in Sources */,
 			);

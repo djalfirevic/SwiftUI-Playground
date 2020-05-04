@@ -9,12 +9,8 @@
 import SwiftUI
 
 struct ContentView: View {
-    @Environment(\.managedObjectContext) var context
-    @FetchRequest(
-        entity: ToDoItem.entity(),
-        sortDescriptors: [ NSSortDescriptor(keyPath: \ToDoItem.priorityNum, ascending: false) ])
-    var todoItems: FetchedResults<ToDoItem>
     @State private var showNewTask = false
+    @State private var searchText = ""
     
     var body: some View {
         ZStack {
@@ -36,24 +32,16 @@ struct ContentView: View {
                 }
                 .padding()
                 
-                List {
-                    ForEach(todoItems) { todoItem in
-                        ToDoListRow(todoItem: todoItem)
-                    }
-                    .onDelete(perform: deleteTask)
-                                       
-                }
+                SearchBar(text: $searchText)
+                    .padding(.top, -40)
+                
+                FilteredList($searchText)
             }
             .rotation3DEffect(Angle(degrees: showNewTask ? 5 : 0), axis: (x: 1, y: 0, z: 0))
             .offset(y: showNewTask ? -50 : 0)
             .animation(.easeOut)
             .onAppear {
                 UITableView.appearance().separatorColor = .clear
-            }
-            
-            // If there is no data, show an empty view
-            if todoItems.count == 0 {
-                NoDataView()
             }
             
             // Display the "Add new todo" view
@@ -69,26 +57,6 @@ struct ContentView: View {
                     .animation(.interpolatingSpring(stiffness: 200.0, damping: 25.0, initialVelocity: 10.0))
             }
         }
-    }
-    
-    private func deleteTask(indexSet: IndexSet) {
-        for index in indexSet {
-            let itemToDelete = todoItems[index]
-            context.delete(itemToDelete)
-        }
-        
-        do {
-            try context.save()
-        } catch {
-            print(error)
-        }
-    }
-
-}
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
     }
 }
 
@@ -109,7 +77,7 @@ struct NoDataView: View {
     var body: some View {
         Image("welcome")
             .resizable()
-            .scaledToFit()      
+            .scaledToFit()
     }
 }
 
@@ -146,5 +114,59 @@ struct ToDoListRow: View {
         case .normal: return .orange
         case .low: return .green
         }
+    }
+}
+
+struct FilteredList: View {
+    @Environment(\.managedObjectContext) var context
+    @Binding var searchText: String
+    var fetchRequest: FetchRequest<ToDoItem>
+    var todoItems: FetchedResults<ToDoItem> {
+        fetchRequest.wrappedValue
+    }
+
+    init(_ searchText: Binding<String>) {
+        self._searchText = searchText
+
+        let predicate = searchText.wrappedValue.isEmpty ? NSPredicate(value: true) : NSPredicate(format: "name CONTAINS[c] %@", searchText.wrappedValue)
+
+        self.fetchRequest = FetchRequest(entity: ToDoItem.entity(),
+                                         sortDescriptors: [ NSSortDescriptor(keyPath: \ToDoItem.priorityNum, ascending: false) ],
+                                         predicate: predicate,
+                                         animation: .default)
+    }
+
+    var body: some View {
+        ZStack {
+            List {
+                ForEach(todoItems) { todoItem in
+                    ToDoListRow(todoItem: todoItem)
+                }
+                .onDelete(perform: deleteTask)
+            }
+
+            if todoItems.count == 0 {
+                NoDataView()
+            }
+        }
+    }
+
+    private func deleteTask(indexSet: IndexSet) {
+        for index in indexSet {
+            let itemToDelete = todoItems[index]
+            context.delete(itemToDelete)
+        }
+
+        do {
+            try context.save()
+        } catch {
+            print(error)
+        }
+    }
+}
+
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
     }
 }
