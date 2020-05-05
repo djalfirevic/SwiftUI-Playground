@@ -52,22 +52,21 @@ struct DashboardView: View {
         return totalIncome - totalExpense
     }
     
-        private var paymentDataForView: [PaymentActivity] {
-            
-            switch listType {
-            case .all:
-                return paymentActivities
-                    .sorted(by: { $0.date.compare($1.date) == .orderedDescending })
-            case .income:
-                return paymentActivities
-                    .filter { $0.type == .income }
-                    .sorted(by: { $0.date.compare($1.date) == .orderedDescending })
-            case .expense:
-                return paymentActivities
-                    .filter { $0.type == .expense }
-                    .sorted(by: { $0.date.compare($1.date) == .orderedDescending })
-            }
+    private var paymentDataForView: [PaymentActivity] {
+        switch listType {
+        case .all:
+            return paymentActivities
+                .sorted(by: { $0.date.compare($1.date) == .orderedDescending })
+        case .income:
+            return paymentActivities
+                .filter { $0.type == .income }
+                .sorted(by: { $0.date.compare($1.date) == .orderedDescending })
+        case .expense:
+            return paymentActivities
+                .filter { $0.type == .expense }
+                .sorted(by: { $0.date.compare($1.date) == .orderedDescending })
         }
+    }
     
     @State private var listType: TransactionDisplayType = .all
     @State private var selectedPaymentActivity: PaymentActivity?
@@ -366,8 +365,6 @@ struct TransactionHeader: View {
         }
     }
 }
-
-
 
 struct TransactionCellView: View {
     @ObservedObject var transaction: PaymentActivity
