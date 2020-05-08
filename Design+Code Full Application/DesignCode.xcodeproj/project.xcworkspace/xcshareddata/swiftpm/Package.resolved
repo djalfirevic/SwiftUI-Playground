@@ -1,0 +1,43 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "Contentful",
+        "repositoryURL": "https://github.com/contentful/contentful.swift.git",
+        "state": {
+          "branch": null,
+          "revision": "ab8d4d452a2863b9105fc2a7da9a7ddda792addd",
+          "version": "5.0.6"
+        }
+      },
+      {
+        "package": "Lottie",
+        "repositoryURL": "https://github.com/airbnb/lottie-ios.git",
+        "state": {
+          "branch": null,
+          "revision": "8f81de8d81da8631fd95ff81a9db133b76e13ea4",
+          "version": "3.1.6"
+        }
+      },
+      {
+        "package": "SDWebImage",
+        "repositoryURL": "https://github.com/SDWebImage/SDWebImage.git",
+        "state": {
+          "branch": null,
+          "revision": "aa7ff6f060d8f34d2c66a716aefff1a3bc9ef816",
+          "version": "5.5.2"
+        }
+      },
+      {
+        "package": "SDWebImageSwiftUI",
+        "repositoryURL": "https://github.com/SDWebImage/SDWebImageSwiftUI.git",
+        "state": {
+          "branch": null,
+          "revision": "e0af3b71af59b6da0c33f83686f9787bb54c175a",
+          "version": "0.10.3"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
