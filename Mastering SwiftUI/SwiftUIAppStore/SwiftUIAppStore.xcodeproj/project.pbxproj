@@ -14,6 +14,10 @@
 		C4C6931B2476CF9600AA2317 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4C6931A2476CF9600AA2317 /* Preview Assets.xcassets */; };
 		C4C6931E2476CF9600AA2317 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4C6931C2476CF9600AA2317 /* LaunchScreen.storyboard */; };
 		C4C6932B2476D0E700AA2317 /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C6932A2476D0E700AA2317 /* Article.swift */; };
+		C4C6932D2476D2BC00AA2317 /* ArticleExcerptView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C6932C2476D2BC00AA2317 /* ArticleExcerptView.swift */; };
+		C4C6932F2476D40900AA2317 /* ArticleCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C6932E2476D40900AA2317 /* ArticleCardView.swift */; };
+		C4C693312476D71D00AA2317 /* AvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C693302476D71D00AA2317 /* AvatarView.swift */; };
+		C4C693332476D76600AA2317 /* TopBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C693322476D76600AA2317 /* TopBarView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +30,10 @@
 		C4C6931D2476CF9600AA2317 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C4C6931F2476CF9600AA2317 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C4C6932A2476D0E700AA2317 /* Article.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
+		C4C6932C2476D2BC00AA2317 /* ArticleExcerptView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleExcerptView.swift; sourceTree = "<group>"; };
+		C4C6932E2476D40900AA2317 /* ArticleCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleCardView.swift; sourceTree = "<group>"; };
+		C4C693302476D71D00AA2317 /* AvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarView.swift; sourceTree = "<group>"; };
+		C4C693322476D76600AA2317 /* TopBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopBarView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +106,10 @@
 			isa = PBXGroup;
 			children = (
 				C4C693152476CF9500AA2317 /* ContentView.swift */,
+				C4C693302476D71D00AA2317 /* AvatarView.swift */,
+				C4C693322476D76600AA2317 /* TopBarView.swift */,
+				C4C6932C2476D2BC00AA2317 /* ArticleExcerptView.swift */,
+				C4C6932E2476D40900AA2317 /* ArticleCardView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -183,8 +195,12 @@
 			files = (
 				C4C6932B2476D0E700AA2317 /* Article.swift in Sources */,
 				C4C693122476CF9500AA2317 /* AppDelegate.swift in Sources */,
+				C4C693312476D71D00AA2317 /* AvatarView.swift in Sources */,
 				C4C693142476CF9500AA2317 /* SceneDelegate.swift in Sources */,
 				C4C693162476CF9500AA2317 /* ContentView.swift in Sources */,
+				C4C6932D2476D2BC00AA2317 /* ArticleExcerptView.swift in Sources */,
+				C4C693332476D76600AA2317 /* TopBarView.swift in Sources */,
+				C4C6932F2476D40900AA2317 /* ArticleCardView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
