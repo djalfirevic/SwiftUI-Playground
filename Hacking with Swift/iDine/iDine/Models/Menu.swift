@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct MenuSection: Codable {
+struct MenuSection: Codable, Identifiable {
     
     // MARK: - Properties
     let id: UUID
@@ -17,7 +17,7 @@ struct MenuSection: Codable {
     
 }
 
-struct MenuItem: Codable, Equatable {
+struct MenuItem: Codable, Equatable, Identifiable {
     
     // MARK: - Properties
     let id: UUID
