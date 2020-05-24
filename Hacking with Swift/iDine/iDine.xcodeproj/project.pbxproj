@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C493958B247A4845005B4E32 /* ItemRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C493958A247A4845005B4E32 /* ItemRow.swift */; };
 		C4DD98DF24738D1B00242CDD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4DD98DE24738D1B00242CDD /* AppDelegate.swift */; };
 		C4DD98E124738D1B00242CDD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4DD98E024738D1B00242CDD /* SceneDelegate.swift */; };
 		C4DD98E324738D1B00242CDD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4DD98E224738D1B00242CDD /* ContentView.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C493958A247A4845005B4E32 /* ItemRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemRow.swift; sourceTree = "<group>"; };
 		C4DD98DB24738D1B00242CDD /* iDine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iDine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4DD98DE24738D1B00242CDD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C4DD98E024738D1B00242CDD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				C4DD98E224738D1B00242CDD /* ContentView.swift */,
+				C493958A247A4845005B4E32 /* ItemRow.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -210,6 +213,7 @@
 				C4DD98DF24738D1B00242CDD /* AppDelegate.swift in Sources */,
 				C4DD98E124738D1B00242CDD /* SceneDelegate.swift in Sources */,
 				C4DD98FA24738DB600242CDD /* Order.swift in Sources */,
+				C493958B247A4845005B4E32 /* ItemRow.swift in Sources */,
 				C4DD98F824738D9900242CDD /* Menu.swift in Sources */,
 				C4DD98E324738D1B00242CDD /* ContentView.swift in Sources */,
 				C4DD98FF24738E4100242CDD /* Helper.swift in Sources */,
