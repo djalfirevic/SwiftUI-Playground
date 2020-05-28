@@ -7,9 +7,10 @@
 //
 
 import SwiftUI
+import Combine
 
-class EmojiMemoryGame {
-    private var model = EmojiMemoryGame.createMemoryGame()
+class EmojiMemoryGame: ObservableObject {
+    @Published private var model = EmojiMemoryGame.createMemoryGame()
     
     static func createMemoryGame() -> MemoryGame<String> {
         let emojis = ["👻", "🎃", "🕷"]
