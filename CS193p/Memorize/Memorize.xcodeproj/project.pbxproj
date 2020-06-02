@@ -112,6 +112,7 @@
 		C4048E8224758FF0000F9CB0 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				C40E04BA2486A3EF0013D152 /* Cardify.swift */,
 				C4048E7024758FCE000F9CB0 /* EmojiMemoryGameView.swift */,
 				C40E04B824869ECA0013D152 /* Pie.swift */,
 				C4331DD62480E35B004B738E /* Grid.swift */,
@@ -126,7 +127,6 @@
 			children = (
 				C4331DED24816C70004B738E /* Array+Identifiable.swift */,
 				C4331DEF24817629004B738E /* Array+Only.swift */,
-				C40E04BA2486A3EF0013D152 /* Cardify.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
