@@ -9,9 +9,9 @@
 import SwiftUI
 
 struct GridLayout {
-    var size: CGSize
-    var rowCount = 0
-    var columnCount = 0
+    private(set) var size: CGSize
+    private(set) var rowCount = 0
+    private(set) var columnCount = 0
     
     init(itemCount: Int, nearAspectRatio desiredAspectRatio: Double = 1, in size: CGSize) {
         self.size = size
