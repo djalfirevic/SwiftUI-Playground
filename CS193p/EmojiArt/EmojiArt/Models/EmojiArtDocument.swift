@@ -7,20 +7,12 @@
 //
 
 import SwiftUI
+import Combine
 
 class EmojiArtDocument: ObservableObject {
     static let palette = "⭐️⛅️🍎🌍🥨⚾️"
     
-    // @Published - workaround for property observer problem with property wrappers
-    private var emojiArt: EmojiArt {
-        willSet {
-            objectWillChange.send()
-        }
-        didSet {
-            UserDefaults.standard.set(emojiArt.json, forKey: EmojiArtDocument.untitled)
-        }
-    }
-    
+    @Published private var emojiArt: EmojiArt
     @Published private(set) var backgroundImage: UIImage?
     
     var emojis: [EmojiArt.Emoji] {
@@ -28,9 +20,12 @@ class EmojiArtDocument: ObservableObject {
     }
     
     private static let untitled = "EmojiArtDocument.Untitled"
-    
+    private var autosaveCancellable: AnyCancellable?
     init() {
         emojiArt = EmojiArt(json: UserDefaults.standard.data(forKey: EmojiArtDocument.untitled)) ?? EmojiArt()
+        autosaveCancellable = $emojiArt.sink { emojiArt in
+            UserDefaults.standard.set(emojiArt.json, forKey: EmojiArtDocument.untitled)
+        }
         fetchBackgroundImageData()
     }
     
@@ -52,25 +47,28 @@ class EmojiArtDocument: ObservableObject {
         }
     }
     
-    func setBackgroundURL(_ url: URL?) {
-        emojiArt.backgroundURL = url?.imageURL
-        
-        fetchBackgroundImageData()
+    var backgroundURL: URL? {
+        set {
+            emojiArt.backgroundURL = newValue?.imageURL
+            fetchBackgroundImageData()
+        }
+        get {
+            return emojiArt.backgroundURL
+        }
     }
     
+    private var fetchImageCancellable: AnyCancellable?
     private func fetchBackgroundImageData() {
         backgroundImage = nil
         
         if let url = self.emojiArt.backgroundURL {
-            DispatchQueue.global(qos: .userInitiated).async {
-                if let data = try? Data(contentsOf: url) {
-                    DispatchQueue.main.async {
-                        if url == self.emojiArt.backgroundURL {
-                            self.backgroundImage = UIImage(data: data)
-                        }
-                    }
-                }
-            }
+            fetchImageCancellable?.cancel() // Cancel the previous one and go get the new one
+            
+            fetchImageCancellable = URLSession.shared.dataTaskPublisher(for: url)
+                .map { data, urlResponse in UIImage(data: data) }
+                .receive(on: DispatchQueue.main)
+                .replaceError(with: nil)
+                .assign(to: \EmojiArtDocument.backgroundImage, on: self)
         }
     }
 }

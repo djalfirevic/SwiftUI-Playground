@@ -16,7 +16,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     // MARK: - UIWindowSceneDelegate
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        let contentView = EmojiDocumentView(document: EmojiArtDocument())
+        let contentView = EmojiArtDocumentView(document: EmojiArtDocument())
 
         // Use a UIHostingController as window root view controller.
         if let windowScene = scene as? UIWindowScene {
