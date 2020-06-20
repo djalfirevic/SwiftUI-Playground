@@ -1,10 +1,11 @@
 //
 //  GridLayout.swift
-//  Memorize
+//  EmojiArt
 //
-//  Created by Djuro Alfirevic on 5/29/20.
+//  Created by Djuro Alfirevic on 6/19/20.
 //  Copyright © 2020 Djuro Alfirevic. All rights reserved.
 //
+
 
 import SwiftUI
 

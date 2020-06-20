@@ -1,19 +1,28 @@
 //
 //  Grid.swift
-//  Memorize
+//  EmojiArt
 //
-//  Created by Djuro Alfirevic on 5/29/20.
+//  Created by Djuro Alfirevic on 6/19/20.
 //  Copyright © 2020 Djuro Alfirevic. All rights reserved.
 //
 
+
 import SwiftUI
 
-struct Grid<Item, ItemView>: View where Item: Identifiable, ItemView: View {
-    var items: [Item]
-    var viewForItem: (Item) -> ItemView
-    
+extension Grid where Item: Identifiable, ID == Item.ID {
     init(_ items: [Item], viewForItem: @escaping (Item) -> ItemView) {
+        self.init(items, id: \Item.id, viewForItem: viewForItem)
+    }
+}
+
+struct Grid<Item, ID, ItemView>: View where ID: Hashable, ItemView: View {
+    private var items: [Item]
+    private var id: KeyPath<Item, ID>
+    private var viewForItem: (Item) -> ItemView
+    
+    init(_ items: [Item], id: KeyPath<Item, ID>, viewForItem: @escaping (Item) -> ItemView) {
         self.items = items
+        self.id = id
         self.viewForItem = viewForItem
     }
     
@@ -23,17 +32,21 @@ struct Grid<Item, ItemView>: View where Item: Identifiable, ItemView: View {
         }
     }
     
-    func body(for layout: GridLayout) -> some View {
-        ForEach(items) { item in
+    private func body(for layout: GridLayout) -> some View {
+        ForEach(items, id: id) { item in
             self.body(for: item, in: layout)
         }
     }
     
-    func body(for item: Item, in layout: GridLayout) -> some View {
-        let index = self.items.firstIndex(matching: item)!
+    private func body(for item: Item, in layout: GridLayout) -> some View {
+        let index = self.items.firstIndex(where: { item[keyPath: id] == $0[keyPath: id] })
         
-        return viewForItem(item)
-            .frame(width: layout.itemSize.width, height: layout.itemSize.height)
-            .position(layout.location(ofItemAt: index))
+        return Group {
+            if index != nil {
+                viewForItem(item)
+                    .frame(width: layout.itemSize.width, height: layout.itemSize.height)
+                    .position(layout.location(ofItemAt: index!))
+            }
+        }
     }
 }
