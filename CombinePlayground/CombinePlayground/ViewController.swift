@@ -32,7 +32,7 @@ class DataManager {
         return URLSession.shared.dataTaskPublisher(for: url)
             .map { $0.data }
             .decode(type: [User].self, decoder: JSONDecoder())
-            .receive(on: DispatchQueue.main)
+            .receive(on: RunLoop.main)
             .eraseToAnyPublisher()
     }
     
