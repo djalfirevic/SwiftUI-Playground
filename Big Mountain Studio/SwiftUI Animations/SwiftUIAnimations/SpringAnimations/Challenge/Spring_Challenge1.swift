@@ -63,8 +63,8 @@ struct Spring_Challenge1: View {
                     .padding(.vertical, 60)
                     .frame(width: gp.frame(in: .global).width * 3) // Make HStack 3X width of device
                     .frame(maxHeight: .infinity)
-                    .offset(x: self.step == 1 ? gp.frame(in: .global).width
-                        : self.step == 2 ? 0 : -gp.frame(in: .global).width)
+                    .offset(x: self.step == 1 ? 0
+                        : self.step == 2 ? -gp.frame(in: .global).width : -2 * gp.frame(in: .global).width)
                     .animation(Animation.interpolatingSpring(stiffness: 40, damping: 8))
                 }
                 
