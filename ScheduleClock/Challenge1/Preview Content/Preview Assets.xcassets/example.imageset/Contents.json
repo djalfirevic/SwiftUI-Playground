@@ -1,0 +1,22 @@
+{
+  "images" : [
+    {
+      "filename" : "JournalClub_ChallengeOne_light.jpeg",
+      "idiom" : "universal"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "filename" : "JournalClub_ChallengeOne.jpeg",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
