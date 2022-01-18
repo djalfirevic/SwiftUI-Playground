@@ -9,7 +9,7 @@
 import CoreData
 import Combine
 
-extension Airline: Identifiable, Comparable {
+extension Airline: Comparable {
     static func withCode(_ code: String, in context: NSManagedObjectContext) -> Airline {
         let request = fetchRequest(NSPredicate(format: "code_ = %@", code))
         let results = (try? context.fetch(request)) ?? []
