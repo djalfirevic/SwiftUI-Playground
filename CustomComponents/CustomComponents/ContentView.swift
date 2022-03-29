@@ -25,6 +25,9 @@ struct ContentView: View {
     @State private var password = ""
     @State private var isPasswordValid = true
     
+    @StateObject private var viewModel = PinViewModel(numberOfDigits: 6, didComplete: .constant(true), didFailToValidate: .constant(false))
+    @FocusState private var focusedField: Int?
+    
     // MARK: - View
     var body: some View {
         VStack {
@@ -90,8 +93,33 @@ struct ContentView: View {
                             textContentType: nil) {
                 
             }
+            
+            HStack(spacing: 16) {
+                ForEach(0..<6, id: \.self) { index in
+                    PinTextField(isValid: $viewModel.isValid,
+                                 text: $viewModel.characters[index],
+                                 shouldValidate: $viewModel.shouldValidate,
+                                 didEnterValue: {
+                        viewModel.didEnterValue(at: index)
+                    }, didRemoveValue: {
+                        viewModel.didRemoveValue(at: index)
+                    }, didBecomeActive: {
+                        viewModel.didStartEditing(at: index)
+                    })
+                    .focused($focusedField, equals: index)
+                }
+            }
+            .padding(.top, 8)
         }
         .padding()
+        .onChange(of: viewModel.currentInputIndex) { newValue in
+            focusedField = newValue
+        }
+        .onAppear {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                focusedField = viewModel.currentInputIndex
+            }
+        }
     }
     
 }

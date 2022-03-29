@@ -15,6 +15,7 @@
 		1A5A9CFC27F225B900D8A7FD /* ValidationRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5A9CFB27F225B900D8A7FD /* ValidationRule.swift */; };
 		1A5A9CFE27F226D500D8A7FD /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5A9CFD27F226D500D8A7FD /* Fonts.swift */; };
 		1A5A9D0027F227D500D8A7FD /* CustomTextFieldFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5A9CFF27F227D500D8A7FD /* CustomTextFieldFormatter.swift */; };
+		1A72675827F3895800C2C1DE /* PinTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A72675727F3895800C2C1DE /* PinTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		1A5A9CFB27F225B900D8A7FD /* ValidationRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationRule.swift; sourceTree = "<group>"; };
 		1A5A9CFD27F226D500D8A7FD /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		1A5A9CFF27F227D500D8A7FD /* CustomTextFieldFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextFieldFormatter.swift; sourceTree = "<group>"; };
+		1A72675727F3895800C2C1DE /* PinTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 			children = (
 				1A5A9CEB27F2254F00D8A7FD /* CustomComponentsApp.swift */,
 				1A5A9CED27F2254F00D8A7FD /* ContentView.swift */,
+				1A72675727F3895800C2C1DE /* PinTextField.swift */,
 				1A5A9CF927F2256D00D8A7FD /* CustomTextField.swift */,
 				1A5A9CFB27F225B900D8A7FD /* ValidationRule.swift */,
 				1A5A9CFF27F227D500D8A7FD /* CustomTextFieldFormatter.swift */,
@@ -154,6 +157,7 @@
 				1A5A9CEC27F2254F00D8A7FD /* CustomComponentsApp.swift in Sources */,
 				1A5A9D0027F227D500D8A7FD /* CustomTextFieldFormatter.swift in Sources */,
 				1A5A9CFC27F225B900D8A7FD /* ValidationRule.swift in Sources */,
+				1A72675827F3895800C2C1DE /* PinTextField.swift in Sources */,
 				1A5A9CFA27F2256D00D8A7FD /* CustomTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
