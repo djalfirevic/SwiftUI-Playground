@@ -1,0 +1,275 @@
+{
+    "title": "Pro SwiftUI",
+    "sections": [
+        {
+            "title": "Layout and Identity",
+            "chapters": [
+                {
+                    "title": "Parents And Children",
+                    "subtitle": "How SwiftUI creates type-enforced layouts using ModifiedContent."
+                },
+                {
+                    "title": "Fixing View Sizes 1",
+                    "subtitle": "Stopping wide images from pushing frames outside the screen edge."
+                },
+                {
+                    "title": "Fixing View Sizes 2",
+                    "subtitle": "How to make two views have the same height."
+                },
+                {
+                    "title": "Layout Neutrality",
+                    "subtitle": "Using nil to inherit dimensions from a child view."
+                },
+                {
+                    "title": "Multiple Frames 1",
+                    "subtitle": "Applying modifiers multiple times."
+                },
+                {
+                    "title": "Multiple Frames 2",
+                    "subtitle": "Seemingly contradictory frames are actually fine."
+                },
+                {
+                    "title": "Inside TupleView 1",
+                    "subtitle": "How SwiftUI creates type-enforced layouts using TupleView."
+                },
+                {
+                    "title": "Inside TupleView 2",
+                    "subtitle": "Extending ViewBuilder to support 11 children."
+                },
+                {
+                    "title": "Understanding Identity 1",
+                    "subtitle": "Conditions become part of our view's type."
+                },
+                {
+                    "title": "Understanding Identity 2",
+                    "subtitle": "Swift creates a binary tree for switch statements."
+                },
+                {
+                    "title": "Understanding Identity 3",
+                    "subtitle": "Losing identity thanks to _ConditionalContent."
+                },
+                {
+                    "title": "Understanding Identity 4",
+                    "subtitle": "Computed property using structural identity."
+                },
+                {
+                    "title": "Understanding Identity 5",
+                    "subtitle": "Creating a customizable hidden() modifier."
+                },
+                {
+                    "title": "Discarding Identity 1",
+                    "subtitle": "The default List reorder animation."
+                },
+                {
+                    "title": "Discarding Identity 2",
+                    "subtitle": "The List animation using a random ID."
+                },
+                {
+                    "title": "Discarding Identity 3",
+                    "subtitle": "Circles and icons sliding in randomly."
+                },
+                {
+                    "title": "Optional Views",
+                    "subtitle": "SwiftUI makes Optional<View> conform to View."
+                }
+            ]
+        },
+        {
+            "title": "Animations and Transitions",
+            "chapters": [
+                {
+                    "title": "Animating The Unanimatable",
+                    "subtitle": "Animating Z-Index"
+                },
+                {
+                    "title": "Avoiding Pain In iOS 15.6 And Below",
+                    "subtitle": "Animating foregroundColor() in older operating systems."
+                },
+                {
+                    "title": "Creating Animated Views 1",
+                    "subtitle": "Counting text up and down."
+                },
+                {
+                    "title": "Creating Animated Views 2",
+                    "subtitle": "Making text appear letter by letter."
+                },
+                {
+                    "title": "Custom Timing Curves 1",
+                    "subtitle": "Creating a bounce-at-edges animation curve."
+                },
+                {
+                    "title": "Custom Timing Curves 2",
+                    "subtitle": "Creating an ease-in-out-back animation curve."
+                },
+                {
+                    "title": "Overriding Animations 1",
+                    "subtitle": "Disabling motion animations with a function."
+                },
+                {
+                    "title": "Overriding Animations 2",
+                    "subtitle": "Disabling motion animations with a modifier."
+                },
+                {
+                    "title": "Overriding Animations 3",
+                    "subtitle": "Disabling implicit animations on a case-by-case basis."
+                },
+                {
+                    "title": "Overriding Animations 4",
+                    "subtitle": "Replacing implicit animations on a case-by-case basis."
+                },
+                {
+                    "title": "Overriding Animations 5",
+                    "subtitle": "Making only one view override an animation."
+                },
+                {
+                    "title": "Advanced Transitions",
+                    "subtitle": "Recreating Twitter's heart animation."
+                },
+            ]
+        },
+        {
+            "title": "Environment and Preferences",
+            "chapters": [
+                {
+                    "title": "The Environment 1",
+                    "subtitle": "Build a requirable text field."
+                },
+                {
+                    "title": "The Environment 2",
+                    "subtitle": "Adjusting stroke width in the environment."
+                },
+                {
+                    "title": "Environment Vs EnvironmentObject 1",
+                    "subtitle": "Theme data as an environment key."
+                },
+                {
+                    "title": "Environment Vs EnvironmentObject 2",
+                    "subtitle": "Theme data as an environment object."
+                },
+                {
+                    "title": "Environment Vs EnvironmentObject 3",
+                    "subtitle": "Theme data as both environment object and key."
+                },
+                {
+                    "title": "Overriding The Environment",
+                    "subtitle": "Using the transformEnvironment() modifier."
+                },
+                {
+                    "title": "Preferences 1",
+                    "subtitle": "Displaying width preference in the UI."
+                },
+                {
+                    "title": "Preferences 2",
+                    "subtitle": "Using width preference to size other views."
+                },
+                {
+                    "title": "Anchor Preferences",
+                    "subtitle": "Recreating Airbnb's section underlines."
+                }
+            ]
+        },
+        {
+            "title": "Custom Layouts",
+            "chapters": [
+                {
+                    "title": "Adaptive Layouts",
+                    "subtitle": "Switching between layouts using AnyLayout."
+                },
+                {
+                    "title": "Implementing A Radial Layout",
+                    "subtitle": "Laying out views in a circle."
+                },
+                {
+                    "title": "Implementing An Equal Width Layout",
+                    "subtitle": "Laying out views so they have equal horizontal sizes."
+                },
+                {
+                    "title": "Implementing A Relative Width Layout",
+                    "subtitle": "Laying out views by allocating space proportionally."
+                },
+                {
+                    "title": "Implementing A Masonry Layout",
+                    "subtitle": "Laying out views in fixed columns and ragged rows."
+                },
+                {
+                    "title": "Layout Caching",
+                    "subtitle": "Upgrading the masonry layout to perform fewer layout calculations."
+                },
+                {
+                    "title": "Customizing Layout Animations",
+                    "subtitle": "How to get full control over subview animations in a layout."
+                }
+            ]
+        },
+        {
+            "title": "Drawing and Effects",
+            "chapters": [
+                {
+                    "title": "Drawing With Canvas",
+                    "subtitle": "Using your finger to draw glowing lights."
+                },
+                {
+                    "title": "Falling Snow 1",
+                    "subtitle": "Creating a basic particle system."
+                },
+                {
+                    "title": "Falling Snow 2",
+                    "subtitle": "Upgrading our particle system to create metaballs."
+                },
+                {
+                    "title": "Creating A Lava Lamp 1",
+                    "subtitle": "Using metaballs to create a lava lamp effect."
+                },
+                {
+                    "title": "Creating A Lava Lamp 2",
+                    "subtitle": "Upgrading our lava lamp to use animated, irregular polygons."
+                },
+                {
+                    "title": "Blurred Backgrounds",
+                    "subtitle": "Creating a soothing background by animating blurred ellipses."
+                },
+                {
+                    "title": "Magic With SpriteKit",
+                    "subtitle": "Rendering SwiftUI views into fragment shaders."
+                }
+            ]
+        },
+        {
+            "title": "Performance",
+            "chapters": [
+                {
+                    "title": "Delaying Work 1",
+                    "subtitle": "Debouncing text fields and sliders."
+                },
+                {
+                    "title": "Delaying Work 2",
+                    "subtitle": "Delaying and cancelling work with Task."
+                },
+                {
+                    "title": "Skipping Work 1",
+                    "subtitle": "Using @State with classes."
+                },
+                {
+                    "title": "Skipping Work 2",
+                    "subtitle": "Creating an onFirstAppear() modifier."
+                },
+                {
+                    "title": "Skipping Work 3",
+                    "subtitle": "Adding custom modifiers for individual platforms."
+                },
+                {
+                    "title": "Watching For Changes 1",
+                    "subtitle": "Detecting changes using random background colors."
+                },
+                {
+                    "title": "Watching For Changes 2",
+                    "subtitle": "Detecting changes using View._printChanges()."
+                },
+                {
+                    "title": "Watching For Changes 3",
+                    "subtitle": "Custom View methods for debugging and assertions."
+                }
+            ]
+        }
+    ]
+}
